@@ -1,3 +1,3 @@
-const programName = 'Hello, World!';
+let user = 'John Doe'
 
-console.log(programName);
+console.log(user)
