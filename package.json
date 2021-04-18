@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --config config/webpack.dev.js",
     "build": "webpack --config config/webpack.prod.js",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
     "file-loader": "^6.1.0",
     "html-webpack-plugin": "^4.5.0",
     "husky": "^6.0.0",
+    "jest": "^26.6.3",
     "mini-css-extract-plugin": "^0.11.3",
     "pug-html-loader": "^1.1.5",
     "pug-loader": "^2.4.0",
@@ -42,5 +44,8 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.1.4"
+  },
+  "dependencies": {
+    "Faker": "^0.7.2"
   }
 }
