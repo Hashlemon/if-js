@@ -95,3 +95,20 @@ console.log(zeroRandoms);
 
 
 module.exports = min;
+
+//Lesson 4
+
+function curry (f) {
+    return function (a) {
+        return function (b) {
+            return f(a, b);
+        }
+    }
+}
+
+let sum = (a, b) => a + b;
+
+
+let curriedSum = curry(sum);
+
+console.log("curried " +  curriedSum(2)(22) )
