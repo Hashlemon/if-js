@@ -98,6 +98,8 @@ module.exports = min;
 
 //Lesson 4
 
+//Напишите функцию sum, которая возвращает сумму чисел
+
 function curry (f) {
     return function (a) {
         return function (b) {
@@ -108,7 +110,34 @@ function curry (f) {
 
 let sum = (a, b) => a + b;
 
-
 let curriedSum = curry(sum);
 
 console.log("curried " +  curriedSum(2)(22) )
+
+
+//Покрасьте абзацы по клику
+
+const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
+let x = document.getElementsByTagName("P");
+
+function changeColor(id) {
+
+    let clickCount = 0;
+
+    return function() {
+        if (clickCount !== colors.length) {
+            id.style.color = colors[clickCount];
+             clickCount++;
+        } else {
+             clickCount = 0;
+        }
+    }
+}
+for (let i = 0; i < x.length; i++) {
+    x[i].addEventListener('click', changeColor(x[i]));
+}
+
+//Lesson 5
+
+
+
