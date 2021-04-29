@@ -139,5 +139,68 @@ for (let i = 0; i < x.length; i++) {
 
 //Lesson 5
 
+//Преобразование формата даты
+
+let re = /(\d+)-(\d+)-(\d+)/;
+let date = '2020-11-26';
+let newDate = date.replace(re, '$3.$2.$1');
+console.log(newDate);
 
 
+// Поиск объектов размещения
+
+const data = [
+    {
+        country: 'Russia',
+        city: 'Saint Petersburg',
+        hotel: 'Hotel Leopold',
+    },
+    {
+        country: 'Spain',
+        city: 'Santa Cruz de Tenerife',
+        hotel: 'Apartment Sunshine',
+    },
+    {
+        country: 'Slowakia',
+        city: 'Vysokie Tatry',
+        hotel: 'Villa Kunerad',
+    },
+    {
+        country: 'Germany',
+        city: 'Berlin',
+        hotel: 'Hostel Friendship',
+    },
+    {
+        country: 'Indonesia',
+        city: 'Bali',
+        hotel: 'Ubud Bali Resort&SPA',
+    },
+    {
+        country: 'Netherlands',
+        city: 'Rotterdam',
+        hotel: 'King Kong Hostel',
+    },
+    {
+        country: 'Marocco',
+        city: 'Ourika',
+        hotel: 'Rokoko Hotel',
+    },
+    {
+        country: 'Germany',
+        city: 'Berlin',
+        hotel: 'Hotel Rehberge Berlin Mitte',
+    },
+];
+
+const search = str => {
+    const result = [];
+        for (let i = 0; i < data.length; i++) {
+            let obj = data[i];
+                if (obj.country.includes(str) || obj.city.includes(str) || obj.hotel.includes(str)) {
+                    result[result.length] = `${obj.country}, ${obj.city}, ${obj.hotel}`
+                }
+    }
+        return result;
+}
+
+console.log(search('Ru'))
