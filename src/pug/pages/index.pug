@@ -4,3 +4,9 @@ head
   title Hello, World!
   script(src='../../src/js/index.js')
 body
+  ul
+    - const key = [1, 2, 3]
+    each val  in key
+      li
+        p(id='text' + val)= 'Text ' + val
+
